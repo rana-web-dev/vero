@@ -1,0 +1,9 @@
+.loaderMain {
+    justify-content: center;
+    display: flex;
+}
+
+.loader {
+    position: absolute;
+    top: 10%;
+}
