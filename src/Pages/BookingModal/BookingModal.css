@@ -1,0 +1,6 @@
+.bookingModalFormInput {
+    margin-top: 5px;
+}
+.bookingModalFormInput:last-child {
+    margin-top: 0;
+}
