@@ -48,8 +48,8 @@ const About = () => {
   // },[])
   return (
     <div className="flex justify-center">
-      <div className="mt-12">
-        <div className="h-[800px] flex justify-center items-center">
+      <div className="">
+        <div className="lex">
           <div className="w-96 p-7">
             <h2 className="text-3xl text-center">Profile</h2>
 
@@ -57,7 +57,7 @@ const About = () => {
             {userDetails?.map((user) => (
               <div key={user._id}>
                 <form>
-                  <div className="form-control my-6 w-full max-w-xs">
+                  <div className="">
                     <label className="label">
                       <span className="label-text">Name</span>
                     </label>
@@ -65,7 +65,7 @@ const About = () => {
                       type="text"
                       disabled
                       defaultValue={user.name}
-                      className="input input-bordered w-full max-w-xs"
+                      className="border px-3 py-2 w-full max-w-xs"
                     />
                   </div>
                   <div className="form-control my-6 w-full max-w-xs">
@@ -76,7 +76,7 @@ const About = () => {
                       defaultValue={user.email}
                       type="email"
                       disabled
-                      className="input input-bordered w-full max-w-xs"
+                      className="border px-3 py-2"
                     />
                   </div>
                   <div className="form-control my-6 w-full max-w-xs">
@@ -89,7 +89,7 @@ const About = () => {
                       defaultValue={user.university}
                       disabled
                       type="text"
-                      className="input input-bordered w-full max-w-xs"
+                      className="border px-3 py-2"
                     />
                   </div>
                   <div className="form-control my-6 w-full max-w-xs">
@@ -100,14 +100,14 @@ const About = () => {
                       defaultValue={user.address}
                       disabled
                       type="text"
-                      className="input input-bordered w-full max-w-xs"
+                      className="border px-3 py-2"
                     />
                   </div>
                 </form>
               </div>
             ))}
 
-            <label htmlFor="my-modal-3" className="btn">
+            <label htmlFor="my-modal-3" className=" bg-red-400 p-2 font-bold rounded cursor-pointer btn-xs">
               Update Profile
             </label>
             <BookingModal

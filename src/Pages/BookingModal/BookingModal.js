@@ -1,14 +1,11 @@
 import React from "react";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import './BookingModal.css';
+import "./BookingModal.css";
 
 const BookingModal = ({ userDetails, userData, isLoading, refetch }) => {
-
-
   // Rana update something here
   const userEmail = userData[0]?.email;
-
 
   const navigate = useNavigate();
   const handleSubmit = (event) => {
@@ -45,49 +42,54 @@ const BookingModal = ({ userDetails, userData, isLoading, refetch }) => {
   };
   return (
     <>
-
       <input type="checkbox" id="my-modal-3" className="modal-toggle" />
       <div className="modal">
         <div className="modal-box relative">
           <label
             htmlFor="my-modal-3"
-            className="btn btn-sm btn-circle absolute right-2 top-2"
+            className="cursor-pointer btn-xs absolute right-2 top-2"
           >
             ✕
           </label>
 
-
-
           {/* Rana update something here. Need to map here */}
           {userDetails?.map((user) => (
             <div key={user._id}>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} className="m-3">
+                <label>Name:</label>
                 <input
                   name="name"
                   type="text"
                   placeholder={user.name}
-                  className="input w-full  bookingModalFormInput"
+                  className="w-full border border-black bookingModalFormInput"
                 />
+                <label>Email:</label>
                 <input
                   name="email"
                   type="email"
                   placeholder={userEmail}
-                  className="input w-full  bookingModalFormInput"
+                  className=" w-full border border-black bookingModalFormInput"
                   disabled
                 />
+                <label>University/College/Schools:</label>
                 <input
                   name="university"
                   type="text"
                   placeholder={user.university}
-                  className="input w-full  bookingModalFormInput"
+                  className=" w-full border border-black bookingModalFormInput"
                 />
+                <label>Address:</label>
                 <input
                   name="address"
                   placeholder={user.address}
                   type="text"
-                  className="input w-full  bookingModalFormInput"
+                  className=" w-full border border-black bookingModalFormInput"
                 />
-                <input type="submit" value="Submit" className="input w-full " />
+                <input
+                  type="submit"
+                  value="Update"
+                  className=" border-black border cursor-pointer bookingModalFormInput"
+                />
               </form>
             </div>
           ))}

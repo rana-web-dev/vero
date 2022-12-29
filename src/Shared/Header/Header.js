@@ -39,7 +39,7 @@ const Header = () => {
        </React.Fragment>
     )
   return (
-    <div className="navbar bg-base-100 mb-36 shadow-xl">
+    <div className="navbar bg-base-100 border-b-2 justify-between">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -68,14 +68,15 @@ const Header = () => {
         {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
         <Link className="text-3xl font-extrabold " to='/'>VERO</Link>
       </div>
+      {/* <div className="navbar-end">
+        <a className="btn">Get started</a>
+      </div> */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           {menuItems}
         </ul>
       </div>
-      {/* <div className="navbar-end">
-        <a className="btn">Get started</a>
-      </div> */}
+      
     </div>
   );
 };
